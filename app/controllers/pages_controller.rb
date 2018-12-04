@@ -9,5 +9,9 @@ class PagesController < ApplicationController
         render :contest
     end
 
+    def kitten
+        requested_size = params[:size]
+        @kitten_url = "http://placekitten.com/#{requested_size}/#{requested_size}"
+    end
 
 end
